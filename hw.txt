@@ -1,0 +1,22 @@
+1 - config file
+2 - configure url_prefix for the blueprint
+3 - how to apply b4 and after bp level
+4 - error handling in the blueprint
+5 - lazy instantiation of extensions/dependancies using factory pattern
+6 - reg of non-flask lib to the flask app using factory pattern
+7 - changing the app config at runtime (env variables)
+8 - templates and static files per blueprint
+9 - registering class based routes in a blueprint
+10 - limiting request size per bp and at a global flask level
+
+
+events, triggers, 
+task_scheduling
+    emails
+
+TDD
+deploying flask
+    load balancing
+    docker
+automation
+logging 
