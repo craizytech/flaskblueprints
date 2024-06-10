@@ -1,6 +1,15 @@
 from flask import session, redirect, request, url_for, render_template, flash
 from user import bp
 
+@bp.before_app_request
+def before_request():
+    print("Before Request")
+    
+@bp.after_app_request
+def after_request(response):
+    print("After Request")
+    return response
+    
 @bp.route('/user', methods=["POST", "GET"])
 def user():
     email = None
