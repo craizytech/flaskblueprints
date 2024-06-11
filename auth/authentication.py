@@ -1,7 +1,7 @@
 from flask import session, redirect, request, url_for, render_template, flash
 from auth import bp
 
-@bp.route('/login', methods=["POST", "GET"])
+@bp.route('/', methods=["POST", "GET"])
 def login():
     if request.method == "POST":
         session.permanent = True
