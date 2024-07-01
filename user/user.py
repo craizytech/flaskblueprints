@@ -1,5 +1,6 @@
 from flask import session, redirect, request, url_for, render_template, flash
 from user import bp
+from .mail import send_email
 
 @bp.before_app_request
 def before_request():
@@ -20,9 +21,12 @@ def user():
             email = request.form["email"]
             session["email"] = email
             flash("Email was saved!")
+            send_email(email_address=email)
         else:
             if "email" in session:
                 email = session["email"]
+                flash("Email in session")
+                send_email(session["email"])
         return render_template('user.html',email=email )
     else:
         flash("You are not logged in")
